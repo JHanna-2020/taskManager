@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script>
+    function SubForm(){
+      $.ajax({
+        url:"https://api.apispreadsheets.com/data/9032/",
+        type: "post",
+        data:$("#myForm").serializeArray(),
+        success: function() {alert("Form Data Submitted")},
+        error: function() {alert("There was an error")},
+
+      });
+    }
+  </script>
+  <script>
+    function SubFormGDoc(){
+      $.ajax({
+        url:"https://api.apispreadsheets.com/data/9040/",
+        type: "post",
+        data:$("#myForm").serializeArray(),
+        success: function() {alert("Form Data Submitted")},
+        error: function() {alert("There was an error")},
+
+      });
+    }
+  </script>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <h1>Task Manager</h1>
+    <div id=form>
+      <form id="myForm">
+        <label for="">Date Assigned: </label>
+        <input type="date" name="dateAssigned" id="dateInput">
+        <br>
+        <label for="">Assignment: </label>
+        <input type="text" name="assignment" id="firstNameInput">
+        <br>
+        <label for="">Class:</label>
+        <input type="text" name="class" id="lastNameInput">
+        <br>
+        <label for="">Time: </label>
+        <input type="email" name="time" id="emailInput">
+        <br>
+        <label for="">Grade: </label>
+        <input type="text" name="grade" id="usernameInput" required>
+        <br>
+        <label for="">Date Complete: </label>
+        <input type="date" name="dateComplete" id="password" >
+        <br>
+      </form>
+      <button id="addAssignmentBtn" onclick="SubForm();formFillOut(); clearForm();SubFormGDoc();">Add Assignment</button>
+     
+    </div>
+  <details id="details" ><summary>Most Recent Entry</summary>
+    <p id="description">write the username and password down somewhere <span id="important">we will not be able to recover it if it is forgotten</span></p>
+    <p id="firstName">First Name: </p>
+    <p id="lastName">Last Name: </p>
+    <p id="email">Email: </p>
+    <p id="username">Username: </p>
+    <p id="pass">Password: </p>
+  </details>  
+
+
+<table id="formInfo">
+  <thead id="header">
+    <th id="idNum">ID</th>
+    <th>Date Assigned</th>
+    <th>Assignment</th>
+    <th id="class">Class</th>
+    <th>Time</th>
+    <th>Grade</th>
+    <th>Date Completed </th>
+  </thead>
+
+</table>
+<br>
+<button id="delete" onclick=" deleteLastEntry();">Delete Last Entry</button>
+
+</body>
+
+</html>
