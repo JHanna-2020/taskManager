@@ -40,7 +40,7 @@ function formFillOut() {
   
   var displayInTable = document.getElementById("tblData");
   var row = 1;
-  var newRow = displayInTable.insertRow(row);
+  var newRow = displayInTable.insertRow(row)
 
   var cell1 = newRow.insertCell(0);
   var cell2 = newRow.insertCell(1);
