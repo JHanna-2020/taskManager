@@ -4,7 +4,7 @@ var number = 0;
 function deleteLastEntry(){
   var getTable = document.querySelector('table');
   getTable.deleteRow(1);
- 
+ number = number - 1 
 
 }
 function formFillOut() {
