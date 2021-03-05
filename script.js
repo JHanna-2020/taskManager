@@ -34,7 +34,7 @@ function formFillOut() {
   // update Table
   
 number =number +1;
-  var displayInTable = document.getElementById("formInfo");
+  var displayInTable = document.getElementById("tblData");
   var row = 1;
   var newRow = displayInTable.insertRow(row);
 
@@ -74,5 +74,6 @@ function clearForm() {
   getPassword.value = "";
   getAssignedDate.value = "";
 }
+
 
 
