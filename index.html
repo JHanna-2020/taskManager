@@ -25,15 +25,15 @@
         <label for="">Class:</label>
         <input type="text" name="class" id="lastNameInput">
         <br>
-        <label for="">Time: </label>
-        <input type="email" name="time" id="emailInput">
+        <label for="">Completion: </label>
+        <input type="text" name="time" id="emailInput">
         <br>
         <label for="">Grade: </label>
         <input type="text" name="grade" id="usernameInput" required>
         <br>
         <label for="">Date Complete: </label>
-        <input type="date" name="dateComplete" id="password" >
-        <br>
+        <input type="date" name="Completed" id="password">
+        
       </form>
       <button id="addAssignmentBtn" onclick = "formFillOut(); clearForm();">Add Assignment</button>
     </div>
@@ -53,15 +53,16 @@
                       <th>Date Assigned</th>
                       <th>Assignment</th>
                       <th>Class</th>
-                      <th>Time</th>
+                      <th>Completion</th>
                       <th>Grade</th>
                       <th>Date Completed </th>
                     </tr>
                     
                 </table>
+                <button id="delete" onclick=" deleteLastEntry();">Delete Last Entry</button>
+
                 <button id="export" onclick="exportTableToExcel('tblData', 'members')">Export Data</button>
           
-                <button id="delete" onclick=" deleteLastEntry();">Delete Last Entry</button>
 
     
 </body>

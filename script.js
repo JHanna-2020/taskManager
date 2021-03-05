@@ -1,5 +1,7 @@
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+;
 var number = 0;
 function deleteLastEntry(){
   var getTable = document.querySelector('table');
@@ -28,12 +30,14 @@ function formFillOut() {
   var getPassword = document.getElementById("password");
   var passOutput = document.getElementById("pass");
   passOutput.innerHTML = "Password: " + getPassword.value;
-
   var getAssignedDate = document.getElementById("dateInput");
+  number =number +1;
+  
+  
+
 
   // update Table
   
-number =number +1;
   var displayInTable = document.getElementById("tblData");
   var row = 1;
   var newRow = displayInTable.insertRow(row);

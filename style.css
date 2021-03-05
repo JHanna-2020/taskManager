@@ -70,3 +70,6 @@ table, td, th {
     background-color: skyblue;
     color:white;
 }
+#completion{
+    display: inline-block;
+}
