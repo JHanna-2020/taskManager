@@ -23,9 +23,7 @@ function formFillOut() {
   var userNameOutput = document.getElementById("username");
   userNameOutput.innerHTML = "Username: " + getUserName.value;
 
-  var getEmail = document.getElementById("emailInput");
-  var emailOutput = document.getElementById("email");
-  emailOutput.innerHTML = "Email: " + getEmail.value;
+  
 
   var getPassword = document.getElementById("password");
   var passOutput = document.getElementById("pass");
@@ -53,8 +51,8 @@ function formFillOut() {
   cell2.innerHTML = getAssignedDate.value;
   cell3.innerHTML = getFirstName.value;
   cell4.innerHTML = getLastName.value;
-  cell5.innerHTML = getEmail.value;
-  cell6.innerHTML = getUserName.value;
+  cell5.innerHTML = "<input type='checkbox'>"
+  cell6.innerHTML = getUserName.value; 
   cell7.innerHTML = getPassword.value;
 
  
@@ -69,12 +67,12 @@ function clearForm() {
   var getFirstName = document.getElementById("firstNameInput");
   var getLastName = document.getElementById("lastNameInput");
   var getUserName = document.getElementById("usernameInput");
-  var getEmail = document.getElementById("emailInput");
+  
   var getPassword = document.getElementById("password");
   getFirstName.value = "";
   getLastName.value = "";
   getUserName.value = "";
-  getEmail.value = "";
+
   getPassword.value = "";
   getAssignedDate.value = "";
 }

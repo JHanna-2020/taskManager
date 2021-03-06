@@ -19,7 +19,7 @@
     <script src="export.js"></script>
     <script src="script.js"></script>
     <h1 class="text-center text-primary">Dashboard</h1>
-    <ul class="nav bg bg-dark">
+    <ul class="nav navbar-light">
       <li class="nav-item">
         <a class="nav-link" href="index.html">Home</a>
       </li>
@@ -35,7 +35,8 @@
     </ul>
 
     <div id="navbar"></div>
-    <h2>Task Manager</h1>
+    <h2 class="m-2">Task Manager</h2>
+      <p class="m-2">ID and Completion are autofilled</p>
     <div id="form" class="text-center form-group border border-dark m-2">
       <form id="myForm">
         <label for="">Date Assigned: </label>
@@ -61,9 +62,6 @@
           name="class"
           id="lastNameInput"
         />
-        <br />
-        <label for="">Completion: </label>
-        <input class="m-2 col-lg-3" type="text" name="time" id="emailInput" />
         <br />
         <label for="">Grade: </label>
         <input
@@ -104,7 +102,6 @@
       <p id="username">Username:</p>
       <p id="pass">Password:</p>
     </details>
-
     <table id="tblData" class="w-100">
       <tr class="table bg bg-primary border">
         <th id="idNum">ID</th>

@@ -11,6 +11,9 @@ textarea{
     border-radius: 5px;
 
 }
+.nav{
+    background-color:aquamarine;
+}
 button{
     cursor: pointer;
     width:250px;
