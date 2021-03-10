@@ -86,7 +86,7 @@
       <button
         class="btn btn-success m-2 ml-8"
         id="addAssignmentBtn"
-        onclick="formFillOut(); clearForm();"
+        onclick="formFillOut(); clearForm(); saveToLocalStorage();"
       >
         Add Assignment
       </button>
@@ -134,5 +134,7 @@
     >
       Export Data
     </button>
+    <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+                <button onclick="removeSelectedRow();">Remove</button>
   </body>
 </html>

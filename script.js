@@ -1,7 +1,5 @@
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-;
 var number = 0;
 function deleteLastEntry(){
   var getTable = document.querySelector('table');
@@ -62,9 +60,7 @@ function formFillOut() {
   cell8.innerHTML = getNotes.value;
   
 
- 
-
- }
+};
 
 
  
@@ -74,7 +70,6 @@ function clearForm() {
   var getFirstName = document.getElementById("firstNameInput");
   var getLastName = document.getElementById("lastNameInput");
   var getUserName = document.getElementById("usernameInput");
-  
   var getPassword = document.getElementById("password");
   var getNotes = document.getElementById("notes");
 
@@ -85,6 +80,35 @@ function clearForm() {
   getPassword.value = "";
   getAssignedDate.value = "";
 }
+function addTblRow(){
+   
+  var table = document.getElementById("tblData");
+  var row =1;
+  var newRow = table.insertRow(row)
+  var newRow = table.insertRow(table.length);
+  var cell1 = newRow.insertCell(0);
+  var cell2 = newRow.insertCell(1);
+  var cell3 = newRow.insertCell(2);
+  var cell4 = newRow.insertCell(3);
+  var cell5 = newRow.insertCell(4);
+  var cell6 = newRow.insertCell(5);
+  var cell7 = newRow.insertCell(6);
+  var fName = document.getElementById("firstNameInput").value;
+  var lName = document.getElementById("lname").value;
+  var age = document.getElementById("age").value;
 
-
-
+  cell1.innerHTML = fName;
+  cell2.innerHTML = lName;
+  cell3.innerHTML = age;
+}
+selectedRow();
+function selectedRow(){
+  var rIndex;
+  var table = document.getElementById("tblData");
+  for (var i=1; i < table.length; i++){
+      table.rows[i].onclick = function() {
+          rindex = this.rowIndex;
+          console.log(rIndex);
+      }
+  }
+}
