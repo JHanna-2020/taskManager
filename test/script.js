@@ -15,13 +15,3 @@ function addTblRow(){
     cell2.innerHTML = lName;
     cell3.innerHTML = age;
 }
-function selectedRow(){
-    var rIndex, table = document.getElementById("table");
-    for (var i=1; i < table.length; i++){
-        table.rows[i].onclick = function() {
-            rindex = this.rowIndex;
-            console.log(rIndex);
-        }
-    }
-}
-selectedRow();
