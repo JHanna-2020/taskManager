@@ -1,4 +1,3 @@
-
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var number = 0;
 function deleteLastEntry(){
@@ -100,24 +99,3 @@ function addTblRow(){
   cell2.innerHTML = lName;
   cell3.innerHTML = age;
 }
-//add event listener to table rows
-let thetable = document.getElementById('tblData').getElementsByTagName('tbody')[0]; 
-for (let i = 0; i < thetable.rows.length; i++)
-    {
-        thetable.rows[i].onclick = function()
-        {
-            TableRowClick(this);
-        };
-    }                       
-
-function TableRowClick(therow) {
-    let msg = therow.cells[0].innerHTML+'*'+therow.cells[1].innerHTML+'*'+therow.cells[2].innerHTML+'*'+therow.cells[3].innerHTML+'*'+therow.cells[4].innerHTML;
-    alert(msg);
-};
-
-//clicking the button
-document.getElementById("thebutton").addEventListener("click", function(){
-    let newRow=document.getElementById('tableMain').getElementsByTagName('tbody')[0].insertRow();
-    newRow.innerHTML='<tr><td>11111</td><td>22222</td><td>33333</td><td>44444</td><td>55555</td></tr>';
-    newRow.onclick = function() { TableRowClick(this); };
-});	
